@@ -14,8 +14,7 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" />
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="css/rj-single-image.css" rel="stylesheet" />
-    <link href="css/features.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -24,7 +23,7 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="51">
 
-<section id="rj-intro">
+<section id="intro">
     <div class="intro-body text-center">
         <div class="container intro-content">
             <div class="row">
@@ -46,7 +45,7 @@
     </div>
 </section>
 
-<section id="rj-who-we-are" class="section">
+<section id="about-the-clan" class="section">
     <div class="section-inner">
         <div class="container section-content">
             <div class="row">
@@ -91,7 +90,7 @@
     </div>
 </section>
 
-<section id="rj-counters" class="section section-bgtype-image">
+<section id="counters" class="section section-bgtype-image">
     <div class="section-inner">
         <div class="bg-overlay"></div>
         <div class="container section-content">
@@ -100,7 +99,7 @@
                     <div class="counter-item not-right-column top-column">
                         <i class="fa fa-star-o fa-5x"></i>
                         <div class="inner-content">
-                            <span class="number" data-source="wars-won">0</span>
+                            <span class="number wars-won">0</span>
                         </div>
                         <p>Wars Won</p>
                     </div>
@@ -110,7 +109,7 @@
                     <div class="counter-item not-right-column top-column">
                         <i class="fa fa-trophy fa-5x"></i>
                         <div class="inner-content">
-                            <span class="number" data-source="total-points">0</span>
+                            <span class="number total-trophies">0</span>
                         </div>
                         <p>Trophies</p>
                     </div>
@@ -120,7 +119,7 @@
                     <div class="counter-item not-right-column">
                         <i class="fa fa-users fa-5x"></i>
                         <div class="inner-content">
-                            <span class="number" data-source="members">0</span>
+                            <span class="number member-count">0</span>
                         </div>
                         <p>Members</p>
                     </div>
@@ -131,7 +130,7 @@
     </div>
 </section>
 
-<section id="rj-why-us" class="section">
+<section id="the-rules" class="section">
     <div class="section-inner">
         <div class="container section-content">
             <div class="row">
@@ -155,7 +154,7 @@
     </div>
 </section>
 
-<section id="rj-testimonial" class="section section-bgtype-image">
+<section id="meet-the-clan" class="section section-bgtype-image">
     <div class="section-inner">
         <div class="bg-overlay"></div>
         <div class="container section-content">
@@ -168,64 +167,37 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="member-item not-right-column not-bottom-column">
-                        <div class="member-info clearfix">
-                            <img width="100" src="http://img3.wikia.nocookie.net/__cb20130522210736/clashofclans/images/9/9e/Townhall_level_10.png" alt="" class="img-circle img-thumbnail"/>
-                            <p class="member-author">
-                                ToxicAtom <span class="label label-danger">Level 10</span>
-                                <br>
-                                <em>Leader</em>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="member-item not-right-column not-bottom-column">
-                        <div class="member-info clearfix">
-                            <img width="100" src="http://img4.wikia.nocookie.net/__cb20130217185431/clashofclans/images/thumb/e/e0/Town_Hall9.png/102px-Town_Hall9.png" alt="" class="img-circle img-thumbnail"/>
-                            <p class="member-author">
-                                ToxicAtom <span class="label label-danger">Level 9</span>
-                                <br>
-                                <em>Elder</em>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="member-item not-right-column not-bottom-column">
-                        <div class="member-info clearfix">
-                            <img width="100" src="http://img3.wikia.nocookie.net/__cb20130217185534/clashofclans/images/thumb/f/fa/Town_Hall8.png/100px-Town_Hall8.png" alt="" class="img-circle img-thumbnail"/>
-                            <p class="member-author">
-                                ToxicAtom <span class="label label-danger">Level 8</span>
-                                <br>
-                                <em>Member</em>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="row clan-members"></div>
         </div>
     </div>
 </section>
 
 <footer class="footer">
-    <div id="rj-copyright">
+    <div id="copyright">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p>Copyright &copy; <a href="#">Atomic Mass</a></p>
+                    <p>Copyright &copy; <a href="#">Atomic Mass</a>, images used under CC-BY-SA license from Clash of Clans Wiki.</p>
                 </div>
             </div>
         </div>
     </div>
 </footer>
 
+<script type="text/html" id="member-section">
+<div class="col-md-4">
+    <div class="member-item not-right-column not-bottom-column">
+        <div class="member-info clearfix">
+            <img width="100" src="@img" alt="" class="img-circle img-thumbnail" />
+            <p class="member-author">@name <span class="label label-danger">Level @townhall</span><br/><em>@role</em></p>
+        </div>
+    </div>
+</div>
+</script>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="js/site.js"></script>
 </body>
 
 </html>
